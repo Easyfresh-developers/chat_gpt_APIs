@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(cors());
 import { ChatGPTAPI } from "chatgpt";
 const chatGPTToken = process.env.CHAT_GPT_TOKEN;
-import "./start/addRequire.js";
+import "./addRequire.js";
 
 // require("dotenv").config();
 
