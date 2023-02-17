@@ -20,6 +20,33 @@ const api = new ChatGPTAPI({
 //   lastMesage = await getLatestChatCPTMessage();
 // }
 app.get("/", async (req, res) => {
+  // var conversationId = req.query.conversationId;
+  // var parentId = req.query.parentId;
+  // var message = req.query.message;
+
+  // console.log("being sent:C " + conversationId);
+  // console.log("being sent:P" + parentId);
+
+  // let response = await api.sendMessage(message, {
+  //   conversationId: conversationId,
+  //   parentMessageId: parentId,
+  // });
+
+  // console.log(response);
+  // console.log(response.text);
+  // console.log("being received:C " + response.conversationId);
+  // console.log("being received:P" + response.id);
+
+  // // await updateLastChatGPTMessage(response.id, response.conversationId);
+  // // return response.text;
+  res.send({
+    status: true,
+    // message: response.text,
+    // conversationId: response.conversationId,
+    // parentId: response.id,
+  });
+});
+app.get("/chatgptRespoonse", async (req, res) => {
   var conversationId = req.query.conversationId;
   var parentId = req.query.parentId;
   var message = req.query.message;
@@ -37,8 +64,8 @@ app.get("/", async (req, res) => {
   console.log("being received:C " + response.conversationId);
   console.log("being received:P" + response.id);
 
-  // await updateLastChatGPTMessage(response.id, response.conversationId);
-  // return response.text;
+  // // await updateLastChatGPTMessage(response.id, response.conversationId);
+  // // return response.text;
   res.send({
     status: true,
     message: response.text,
