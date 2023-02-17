@@ -1,4 +1,4 @@
-import express from "express";
+const express = require("express");
 import pkg from "dotenv";
 pkg.config();
 import bodyParser from "body-parser";
