@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 import pkg from "dotenv";
 pkg.config();
 import bodyParser from "body-parser";
@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 app.use(cors());
 import { ChatGPTAPI } from "chatgpt";
 const chatGPTToken = process.env.CHAT_GPT_TOKEN;
-import "./addRequire.js";
 
 // require("dotenv").config();
 
