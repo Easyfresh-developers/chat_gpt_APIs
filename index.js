@@ -3,11 +3,11 @@ import express from "express";
 const app = express();
 process.env.TZ = "Asia/Karachi";
 import pkg from "dotenv";
-import cors from "cors";
-import bodyParser from "body-parser";
+// import cors from "cors";
+// import bodyParser from "body-parser";
 pkg.config();
-app.use(bodyParser.json());
-app.use(cors());
+// app.use(bodyParser.json());
+// app.use(cors());
 //resolving
 // const port = 4000;
 
